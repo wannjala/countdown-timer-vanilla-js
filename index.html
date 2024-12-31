@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="timer-container">
+      <div class="message" id="message-box">Set Timer</div>
+      <div class="timer-display">
+        <div class="input-wrapper">
+          <button class="spinner-btn">▲</button>
+          <input type="number" id="hours" placeholder="HH" min="00" />
+          <button class="spinner-btn">▼</button>
+        </div>
+        <span>:</span>
+        <div class="input-wrapper">
+          <button class="spinner-btn">▲</button>
+          <input
+            type="number"
+            id="minutes"
+            placeholder="MM"
+            min="00"
+            max="59"
+          />
+          <button class="spinner-btn">▼</button>
+        </div>
+        <span>:</span>
+        <div class="input-wrapper">
+          <button class="spinner-btn">▲</button>
+          <input
+            type="number"
+            id="seconds"
+            placeholder="SS"
+            min="00"
+            max="59"
+          />
+          <button class="spinner-btn">▼</button>
+        </div>
+      </div>
+      <div class="timer-controls">
+        <button id="start-button">Start</button>
+        <button id="pause-button" class="hidden">Pause</button>
+        <button id="reset-button" class="hidden">Reset</button>
+        <button id="delete-button" class="hidden">Delete</button>
+      </div>
+    </section>
+  </body>
+  <script src="app.js"></script>
+</html>

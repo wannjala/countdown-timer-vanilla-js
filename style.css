@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik+Vinyl&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #d8d8d8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.timer-container {
+    height: 550px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 60px;
+    background-color: #092b37;
+    transition: all 0.3s ease-in-out;
+}
+
+.message {
+    color: #c0b0b0;
+    font-size: 2.5rem;
+    margin-bottom: 6.5rem;
+    font-family: "Rubik Vinyl", serif;
+    font-weight: 600;
+}
+
+
+.timer-display {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #c29191;
+    font-size: 3.0rem;
+    font-family: "Kanit", serif;
+    font-weight: 800;
+
+}
+
+.timer-display input {
+    width: 4ch;
+    background-color: transparent;
+    border: none;
+    color: #c29191;
+    font-size: 3.5rem;
+    font-family: "Kanit", serif;
+    font-weight: 800;
+    text-align: center;
+    border-radius: 40px;
+    appearance: textfield;
+    position: relative;
+}
+
+.timer-display input::-webkit-outer-spin-button,
+.timer-display input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+.timer-display .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.timer-display .spinner-btn {
+    background: none;
+    border: none;
+    color: #c29191;
+    padding: 0;
+    font-size: 1.5rem;
+    cursor: pointer;
+    height: 1.5rem;
+    width: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.timer-display input:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.timer-display span {
+    color: #c29191;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 40px;
+    background-color: #c29191;
+    color: #161515;
+    font-size: 2.5rem;
+    font-family: "Roboto Condensed", serif;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+    transform: scale(1);
+}
+
+button:hover {
+    background-color: #d4a3a3;
+    transform: scale(1.05);
+}
+
+.hidden {
+    opacity: 0;
+    transform: scale(0.8);
+    position: absolute;
+    pointer-events: none;
+}
+
+.timer-controls {
+    display: flex;
+    gap: 1rem;
+    margin-top: 3rem;
+    justify-content: center;
+}
+
+.times-up {
+    animation: blink 0.4s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.5;
+    }
+}
